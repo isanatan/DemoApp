@@ -17,7 +17,7 @@ jobs:
       - name: Restore all dependencies
         run:  dotnet restore
       - name: Build the application
-        run:  dotnet build --c no-restore
+        run:  dotnet build  --no-restore
       - name:  Run the test case
         run:  dotnet test --no-build --verbosity normal
           echo All Scuuessfull,  deploy your project.
