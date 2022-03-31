@@ -1,5 +1,6 @@
 namespace DemoApp
 {
+    // this is the model of weather
     public class WeatherForecast
     {
         public DateTime Date { get; set; }
