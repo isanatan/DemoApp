@@ -20,4 +20,3 @@ jobs:
         run:  dotnet build  --no-restore
       - name:  Run the test case
         run:  dotnet test --no-build --verbosity normal
-          echo All Scuuessfull,  deploy your project.
