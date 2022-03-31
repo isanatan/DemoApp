@@ -1,0 +1,23 @@
+
+name: CI CD pipeline for DemoAPP
+
+on:
+  push:
+    branches: [ master ]
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up .NET
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: '6.0.x'       
+      - name: Restore all dependencies
+        run:  dotnet restore
+      - name: Build the application
+        run:  dotnet build --c no-restore
+      - name:  Run the test case
+        run:  dotnet test --no-build --verbosity normal
+          echo All Scuuessfull,  deploy your project.
